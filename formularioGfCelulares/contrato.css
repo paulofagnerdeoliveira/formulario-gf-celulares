@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+table{
+    table-layout: auto;
+    width: 95%;
+}
+
+table td{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+table, td, th{
+  border-collapse: collapse;
+}
+
+.table-bordered{
+    width: 95%;
+    max-width: 1300px;
+    margin: 0px auto;
+}
+
+.table{   
+    background: rgb(179, 179, 179);
+    font-size: 1.0rem;
+    border-radius: 3px;
+}
+.table-hover th{
+    border: 0px !important;
+    font-size: 1.0rem;
+   text-align: center;
+   background: blue;
+   color: white;
+   margin-left: 5.0rem;
+}
+@media (max-width: 768px){
+    html{
+        font-size: 10%;
+    }
+}
+
+@media (max-width: 295px){
+    .table-hover th{
+        text-align: center;
+    }
+}
+
+@media (max-width: 297px){
+        .table{
+        flex-direction: column;
+    }
+}
+
+
