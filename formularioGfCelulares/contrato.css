@@ -6,6 +6,7 @@ body{
 table{
     table-layout: auto;
     width: 95%;
+
 }
 
 table td{
@@ -30,11 +31,16 @@ table, td, th{
     max-width: 1300px;
     margin: 0px auto;
 }
+.table-bordered{
+    padding: 50px;
+}
 
 .table{   
     background: rgb(179, 179, 179);
     font-size: 1.0rem;
     border-radius: 3px;
+
+    
 }
 .table-hover th{
     border: 0px !important;
@@ -43,6 +49,18 @@ table, td, th{
    background: blue;
    color: white;
    margin-left: 5.0rem;
+}
+.btn-primary{
+    margin-left: 120px;
+}
+.btn-success{
+    margin-left: 0px;
+}
+.termo{
+    width: 1300px;
+    height: 150px;
+    margin: auto ;
+    background-color: rgb(150, 150, 182);
 }
 @media (max-width: 768px){
     html{
