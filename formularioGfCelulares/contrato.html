@@ -40,7 +40,7 @@
  
 </style>
 <body>
-    <button onclick="window.location.href = './index.html'">Criar Contrato</button>
+  <button onclick="window.location.href = './listaContrato.html'">Voltar</button>
     <table class="table table-bordered ">
       <thead>
         <tr class="table table-hover"><th colspan="7">Dados Do Cliente</th></tr>
@@ -128,11 +128,12 @@
         }
       }
 
+      var urlParams = new URLSearchParams( window.location.search);
+
       var db = firebase.database();
       var ref = db.ref("Contratos");
-      ref.once("value").then(function(contratos){
-        var index = 1;
-        contratos.forEach(element => {
+      ref.child(urlParams.get("path")).once("value").then(function(element){
+        var index = urlParams.get("id");
           var contrato = new Contrato().parse(element.val());
           var tabela01 = new appentTr();
           tabela01.appent(index);
@@ -174,13 +175,6 @@
           tabela05.appent(contrato.assinaturaTecnico);
           tabela05.appent(contrato.assinaturaDoCliente);
           tabela05.showTo("tabela05");
-          
-
-
-
-          console.log(contrato);
-          index++;
-        });    
       })
       .catch(function(err){console.log(err)});
     </script>

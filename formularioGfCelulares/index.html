@@ -302,8 +302,8 @@
                  assinaturaDoTecnico, assinaturaDoCliente);    
                  //função criada para que o dados e enviado automaricamente          
                   rootRef.push(contrato.toJson())
-                  .then(function(){
-                    window.location.href = './contrato.html';
+                  .then(function(el){
+                    window.location.href = "./contrato.html?path="+el.key+"&id="+1;
                   })
                   .catch(function(err){console.log(err)});
                  }
